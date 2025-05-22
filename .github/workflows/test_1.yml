@@ -9,6 +9,12 @@ jobs:
     steps: #tareas
       - name: Hola mundo #nombre de tarea
         run: echo "hla mundo " #tarea a realizar
+      
+      - name: archivo
+        run: touch hola.txt
+      
+      - name: imprimir-archivo
+        run: cat hola.txt
   job-ls-1: #nombre del job
     runs-on: ubuntu-latest   #se ejecuta en un servidor, cada job nececita uno
 
