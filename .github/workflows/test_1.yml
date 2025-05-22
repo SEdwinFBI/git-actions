@@ -1,11 +1,17 @@
-name: hola mundo
+name: hola mundo #nombre del workflow
 
 on: [push]
 
 jobs:
-  hola: 
-    runs-on: ubuntu-latest
+  hola: #nombre del job
+    runs-on: ubuntu-latest  #se ejecuta en un servidor, cada job nececita uno
 
-    steps:
-      - name: Hola mundo 
-        run: echo "hla mundo "
+    steps: #tareas
+      - name: Hola mundo #nombre de tarea
+        run: echo "hla mundo " #tarea a realizar
+  job-ls: #nombre del job
+    runs-on: arch-linux  #se ejecuta en un servidor, cada job nececita uno
+
+    steps: #tareas
+      - name: ejecuta-ls #nombre de tarea
+        run: ls #tarea a realizar
