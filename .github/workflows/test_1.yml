@@ -1,6 +1,16 @@
 name: hola mundo #nombre del workflow
 
-on: [push]
+#on: [push]
+# on: [pull_request, push]
+
+on: 
+  push:
+    branches: #para especificar donde realiza el trabajo
+      - main
+      - otrarama
+  pull_request:
+    branches:
+      - mirama
 
 jobs:
   hola: #nombre del job
@@ -18,9 +28,23 @@ jobs:
       
       - name: imprimir-archivo
         run: cat hola.txt
+
+      - name: script-muchas lienas
+        run: | #en varias lineas
+          touch otro.txt
+          echo "que hay" > otro.txt
+          cat otro.txt
+
+      #actions: encapsular varios spepts repetitivos
+
   job-ls-1: #nombre del job
     runs-on: ubuntu-latest   #se ejecuta en un servidor, cada job nececita uno
+    # needs: hola >para dependencias, puede o no estar, dependiendo
 
     steps: #tareas
       - name: ejecuta-ls #nombre de tarea
         run: ls #tarea a realizar
+      - name: script de raiz #nombre de tarea
+        run: | #tarea a realizar
+          chmod +x script.sh
+          ./script.sh
