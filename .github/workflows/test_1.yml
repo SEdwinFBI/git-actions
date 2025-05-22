@@ -10,7 +10,7 @@ jobs:
       - name: Hola mundo #nombre de tarea
         run: echo "hla mundo " #tarea a realizar
   job-ls: #nombre del job
-    runs-on: arch-linux  #se ejecuta en un servidor, cada job nececita uno
+    runs-on: ubuntu-latest   #se ejecuta en un servidor, cada job nececita uno
 
     steps: #tareas
       - name: ejecuta-ls #nombre de tarea
