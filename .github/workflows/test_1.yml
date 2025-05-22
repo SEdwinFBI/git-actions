@@ -12,6 +12,9 @@ jobs:
       
       - name: archivo
         run: touch hola.txt
+
+      - name: contentido
+        run: echo "¡Hola desde el archivo!" > hola.txt
       
       - name: imprimir-archivo
         run: cat hola.txt
