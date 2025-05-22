@@ -9,7 +9,7 @@ jobs:
     steps: #tareas
       - name: Hola mundo #nombre de tarea
         run: echo "hla mundo " #tarea a realizar
-  job-ls: #nombre del job
+  job-ls-1: #nombre del job
     runs-on: ubuntu-latest   #se ejecuta en un servidor, cada job nececita uno
 
     steps: #tareas
